@@ -238,12 +238,6 @@ func validateProviderConfigs(call *ModuleCall, cfg *Config, noProviderConfig boo
 	return diags
 }
 
-// Verify that the providers being passed in have the correct types, not just
-// matching names.
-func checkProviderTypes(call *ModuleCall, cfg *Config) (diags hcl.Diagnostics) {
-	return
-}
-
 func providerName(name, alias string) string {
 	if alias != "" {
 		name = name + "." + alias
