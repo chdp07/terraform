@@ -587,7 +587,7 @@ func (m *Meta) parseTargetFlags() tfdiags.Diagnostics {
 
 // process will process any -no-color entries out of the arguments. This
 // will potentially modify the args in-place. It will return the resulting
-// slice, and update the Ui and View as needed.
+// slice, and update the Meta and Ui.
 func (m *Meta) process(args []string) []string {
 	// We do this so that we retain the ability to technically call
 	// process multiple times, even if we have no plans to do so

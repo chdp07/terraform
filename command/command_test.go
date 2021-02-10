@@ -1031,7 +1031,7 @@ func fakeRegistryHandler(resp http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func testView(t *testing.T) (view *views.View, done func(*testing.T) *terminal.TestOutput) {
+func testView(t *testing.T) (*views.View, func(*testing.T) *terminal.TestOutput) {
 	streams, done := terminal.StreamsForTesting(t)
 	return views.NewView(streams), done
 }
